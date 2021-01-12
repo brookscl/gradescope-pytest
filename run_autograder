@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
-
-# Set up autograder files
-
 cp /autograder/submission/*.py /autograder/source/
 cd /autograder/source
 
 python3.8 -m pytest -p no:warnings --json-report
 python3.8 pytest2gs.py .report.json /autograder/results/results.json
 
-#cp /autograder/source/results.json /autograder/results/results.json
